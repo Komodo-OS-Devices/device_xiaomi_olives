@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_olives.mk
+    $(LOCAL_DIR)/komodo_olives.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_olives-user \
-    lineage_olives-userdebug \
-    lineage_olives-eng
+    komodo_olives-user \
+    komodo_olives-userdebug \
+    komodo_olives-eng

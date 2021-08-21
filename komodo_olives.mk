@@ -10,17 +10,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/komodo/config/common_full_phone.mk)
 
 # Inherit from olives device
 $(call inherit-product, device/xiaomi/olives/device.mk)
 
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_FACE_UNLOCK := true
+TARGET_USES_BLUR := true
+TARGET_USES_AOSP_CHARGER := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+IS_PHONE := true
+
+# Komodo Stuff
+KOMODO_OFFICIAL := false
+KOMODO_GAPPS_TYPE := nogapps
+KOMODO_VARIANT := RELEASE
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := olives
-PRODUCT_NAME := lineage_olives
+PRODUCT_NAME := komodo_olives
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 8 / 8A / 8A Dual
+PRODUCT_MODEL := Redmi 8 Series
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 
