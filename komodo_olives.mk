@@ -15,17 +15,17 @@ $(call inherit-product, vendor/komodo/config/common_full_phone.mk)
 # Inherit from olives device
 $(call inherit-product, device/xiaomi/olives/device.mk)
 
+# Komodo Stuff
+KOMODO_OFFICIAL := true
+KOMODO_GAPPS_TYPE := nogapps
+KOMODO_VARIANT := RELEASE
+
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_FACE_UNLOCK := true
 TARGET_USES_BLUR := true
 TARGET_USES_AOSP_CHARGER := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 IS_PHONE := true
-
-# Komodo Stuff
-KOMODO_OFFICIAL := false
-KOMODO_GAPPS_TYPE := nogapps
-KOMODO_VARIANT := RELEASE
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := olives
