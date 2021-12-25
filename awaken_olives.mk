@@ -11,15 +11,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common ArrowOS stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
+
 TARGET_BOOT_ANIMATION_RES := 720
-ARROW_GAPPS := true
+
+
+# Inherit some common AwakenOS stuff
+$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 
 # Inherit from olives device
 $(call inherit-product, device/xiaomi/olives/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := olives
-PRODUCT_NAME := arrow_olives
+PRODUCT_NAME := awaken_olives
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 8 / 8A / 8A Dual
