@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/awaken_olives.mk
+    $(LOCAL_DIR)/komodo_olives.mk
 
 COMMON_LUNCH_CHOICES := \
-    awaken_olives-user \
-    awaken_olives-userdebug \
-    awaken_olives-eng
+    komodo_olives-user \
+    komodo_olives-userdebug \
+    komodo_olives-eng
