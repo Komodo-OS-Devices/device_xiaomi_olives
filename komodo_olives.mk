@@ -9,24 +9,34 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-
-TARGET_BOOT_ANIMATION_RES := 720
-
-
-# Inherit some common AwakenOS stuff
-$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
+# Inherit some common Komodo OS stuff
+$(call inherit-product, vendor/komodo/config/common.mk)
 
 # Inherit from olives device
 $(call inherit-product, device/xiaomi/olives/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := olives
-PRODUCT_NAME := awaken_olives
+PRODUCT_NAME := komodo_olives
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 8 / 8A / 8A Dual
+PRODUCT_MODEL := Redmi 8 Series
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
+
+# Komodo Stuff
+KOMODO_OFFICIAL := true
+KOMODO_GAPPS_TYPE := nogapps
+KOMODO_VARIANT := RELEASE
+
+# Some build flags
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_FACE_UNLOCK := true
+TARGET_USES_BLUR := true
+TARGET_USES_AOSP_CHARGER := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_INCLUDE_STOCK_ARCORE := false
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
