@@ -51,16 +51,13 @@
     <integer name="config_longPressOnCameraKeyBehavior">0</integer>
     <integer name="config_doubleTapOnCameraKeyBehavior">0</integer>
 
-    <!-- Does the device have a notification led -->
-    <bool name="config_hasNotificationLed">false</bool>
+    <!-- Default value for proximity check on screen wake
+        NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
+    <bool name="config_proximityCheckOnWake">true</bool>
+    <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
-    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
-    <bool name="config_multiColorBatteryLed">false</bool>
-
-    <!-- Do the battery/notification LEDs support pulsing? Used to decide if we show pulse settings -->
-    <bool name="config_ledCanPulse">false</bool>
-
-    <!-- Does the device support battery LED? -->
-    <bool name="config_intrusiveBatteryLed">false</bool>
+    <!-- Whether device needs to wait for Qualcomm MPCTL service to start
+         before setting power profiles on boot. -->
+    <bool name="config_waitForMpctlOnBoot">true</bool>
 
 </resources>
